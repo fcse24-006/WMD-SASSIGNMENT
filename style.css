@@ -1,0 +1,316 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(86, 146, 84);
+  color: black;
+  width: 100%;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  float: left;
+  margin: 0 0;
+  height: 80px;
+}
+
+.logo img.banner-logo {
+  height: 80px; /* Adjust size as needed */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font: 1em sans-serif;
+}
+
+nav ul li .active {
+  font-weight: bold;
+  border-bottom: 2px solid rgb(74, 173, 87);
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: left;
+}
+
+/* Contact Card */
+.contact-card {
+  background-color: #89a554;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+  gap: 5px;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 0.95rem;
+  color: #566dad;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #317a47;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  color: white;
+}
+
+/* Layout Containers */
+.home-container,
+.about-container,
+.contact-container,
+.policy-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.sidebar,
+.left-sidebar,
+.right-sidebar {
+  flex: 1 1 250px;
+  background-color: #89a554;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  flex: 2 1 500px;
+  background-color: #89a554;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2,
+.main-content p {
+  margin-bottom: 1rem;
+}
+
+.left-sidebar img,
+.right-sidebar img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.products-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #359149;
+  color: white;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  background-color: #317a47;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.background-image {
+  background-image: url('images/20250523_1253_Brahman Bulls Grazing_simple_compose_01jvycbjrrfm5tvzvzxh90n4tq.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* ---------------------------------------- */
+/* Responsive Design */
+/* ---------------------------------------- */
+
+/* Tablets & Small Desktops */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .products-container {
+    padding: 1rem;
+  }
+
+  .main-content,
+  .sidebar,
+  .left-sidebar,
+  .right-sidebar,
+  .contact-card {
+    flex: 1 1 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .product-image {
+    width: 80px;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+}
+
+/* Phones & Small Devices */
+@media (max-width: 480px) {
+  body {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo img.banner-logo {
+    height: 60px;
+  }
+
+  nav ul {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .main-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .main-content p,
+  .contact-info {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+
+  .background-image {
+    background-position: center center;
+  }
+}
